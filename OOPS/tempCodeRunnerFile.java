@@ -1,0 +1,1 @@
+        this.marks = new int[s1.marks.length];
