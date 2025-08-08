@@ -1,99 +1,99 @@
 public class PatternExamples {
 
-    // 1. Number Pattern: Increasing Triangle
-    static void numberIncreasingTriangle() {
-        for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= i; j++) {
+    //base n*n pattern
+   public static void square(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1; j<=n; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    // triangle star pattern
+    public static void lowertraingle(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    // upper triangle star pattern
+    public static void uppertriangle(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1; j<=n-i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    // num pattern lower triangle
+    public static void numpattern(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1; j<=i; j++){
                 System.out.print(j);
             }
             System.out.println();
         }
     }
 
-    // 2. Number Pattern: Inverted Triangle
-    static void numberInvertedTriangle() {
-        for (int i = 5; i >= 1; i--) {
-            for (int j = 1; j <= i; j++) {
+    // num pattern upper triangle
+    public static void pattern(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1; j<=n-i; j++){
                 System.out.print(j);
             }
             System.out.println();
         }
     }
 
-    // 3. Number Pattern: Right Aligned Triangle
-    static void numberRightAligned() {
-        for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= 5 - i; j++) System.out.print(" ");
-            for (int j = 1; j <= i; j++) System.out.print(j);
-            System.out.println();
-        }
-    }
-
-    // 4. Floyd's Triangle
-    static void floydsTriangle() {
-        int num = 1;
-        for (int i = 1; i <= 4; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print(num++ + " ");
+    // pyramid
+    public static void pyramid(int n){
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
             }
-            System.out.println();
-        }
-    }
-
-    // 5. Star Pattern: Square
-    static void starSquare() {
-        for (int i = 1; i <= 4; i++) {
-            for (int j = 1; j <= 5; j++) {
+            for (int j = 1; j <=i; j++){
+                System.out.print("*");
+            }
+            for (int j = 1; j <=i-1; j++){
                 System.out.print("*");
             }
             System.out.println();
         }
     }
 
-    // 6. Star Pattern: Right-angled Triangle
-    static void starRightTriangle() {
-        for (int i = 1; i <= 4; i++) {
-            for (int j = 1; j <= i; j++) {
+    // diamond
+    public static void diamond(int n){
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <=2*i - 1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i-1; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= n-i+1; j++){
+                System.out.print("*");
+            }
+            for (int j = 1; j <= n-i; j++){
                 System.out.print("*");
             }
             System.out.println();
         }
     }
 
-    // 7. Star Pattern: Inverted Triangle
-    static void starInvertedTriangle() {
-        for (int i = 4; i >= 1; i--) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-    }
 
-    // 8. Star Pattern: Pyramid
-    static void starPyramid() {
-        for (int i = 1; i <= 4; i++) {
-            for (int j = 1; j <= 4 - i; j++) System.out.print(" ");
-            for (int j = 1; j <= 2 * i - 1; j++) System.out.print("*");
-            System.out.println();
-        }
-    }
-
-    // 9. Star Pattern: Diamond
-    static void starDiamond() {
-        for (int i = 1; i <= 4; i++) {
-            for (int j = 1; j <= 4 - i; j++) System.out.print(" ");
-            for (int j = 1; j <= 2 * i - 1; j++) System.out.print("*");
-            System.out.println();
-        }
-        for (int i = 3; i >= 1; i--) {
-            for (int j = 1; j <= 4 - i; j++) System.out.print(" ");
-            for (int j = 1; j <= 2 * i - 1; j++) System.out.print("*");
-            System.out.println();
-        }
-    }
-
-    // 10. Character Pattern: Alphabet Triangle
+    // Character Pattern: Alphabet Triangle
     static void charAlphabetTriangle() {
         for (int i = 0; i < 4; i++) {
             for (char ch = 'A'; ch <= 'A' + i; ch++) {
@@ -103,7 +103,7 @@ public class PatternExamples {
         }
     }
 
-    // 11. Character Pattern: Alphabet Pyramid
+    // Character Pattern: Alphabet Pyramid
     static void charAlphabetPyramid() {
         for (int i = 0; i < 4; i++) {
             for (int j = 1; j < 4 - i; j++) System.out.print(" ");
@@ -147,6 +147,20 @@ public class PatternExamples {
             System.out.println();
         }
     }
+
+    // 14. Hollow Parellelogram
+    static void hollowparallelogram() {
+            int n =4, m=5;
+        for (int i = 1; i <= n; i++) {
+            for(int j=1;j<= n-i;j++) System.out.print(" ");
+            for (int j = 1; j <= m; j++) {
+                if (i == 1 || i == n || j == 1 || j == m) System.out.print("*");
+                else System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+    
 
     // 15. Hollow Pyramid
     static void hollowPyramid() {
@@ -194,22 +208,6 @@ public class PatternExamples {
     }
 
     public static void main(String[] args) {
-        numberIncreasingTriangle();
-        numberInvertedTriangle();
-        numberRightAligned();
-        floydsTriangle();
-        starSquare();
-        starRightTriangle();
-        starInvertedTriangle();
-        starPyramid();
-        starDiamond();
-        charAlphabetTriangle();
-        charAlphabetPyramid();
-        pascalTriangle();
-        palindromicNumberPyramid();
-        hollowRectangle();
-        hollowPyramid();
-        butterflyPattern();
-        zigZagPattern();
+        
     }
 }

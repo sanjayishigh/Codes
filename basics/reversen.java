@@ -1,28 +1,21 @@
 import java.util.*;
 
 public class reversen {
-    public static int reverse(int n){
-        int rev = 0;
-        do{
-            int lastd = n%10;
+    public static int reversenumber(int n){
+        int reverse =0;
+        while(n>0){
+            int lastdigit = n%10;
+            reverse = reverse*10 + lastdigit;
             n=n/10;
-            rev = rev*10 + lastd;
-        }while(n>0);
-        return rev;
+        }
+        return reverse;
     }
-    // public static int reverse(int n) {
-    //     int rev = 0;
-    //     for (; n > 0; n = n / 10) {
-    //         int lastd = n % 10;
-    //         rev = rev * 10 + lastd;
-    //     }
-    //     return rev;
-    // }
+       
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter n :");
         int n = sc.nextInt();
-        System.out.print("reverse :"+ reverse(n));
+        System.out.print("Reverse :"+ reversenumber(n));
         
     }
 }
