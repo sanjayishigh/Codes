@@ -1,3 +1,4 @@
+import java.util.*;
 public class allsort {
     public static void bubblesort(int arr[]){
         for(int i =0; i<arr.length-1;i++){
@@ -85,5 +86,7 @@ public class allsort {
         for(int i=0; i<arr.length;i++){
             System.out.print(arr[i]+ " ");
         }
+
+        Arrays.sort(arr);
     }
 }
