@@ -3,3 +3,22 @@
 /workspace.xml
 # Environment-dependent path to Maven home directory
 /mavenHomeManager.xml
+
+# Java class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# IDE specific
+*.iml
+.idea/
+.vscode/
+
+# Build directories
+bin/
+out/
+target/
+
