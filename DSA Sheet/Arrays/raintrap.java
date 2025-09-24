@@ -1,3 +1,20 @@
+// You are given an array h[] where each element represents the height of a block/bar.
+// When it rains, water gets trapped between these bars.
+// Find the total amount of water trapped between the bars.
+
+// Example:
+// Input: h = {4,2,0,6,3,2,5}
+// Output: 11
+
+// Explanation:
+
+// Between bars 4 and 6, water fills over 2 and 0.
+
+// Between bars 6 and 5, water fills over 3 and 2.
+
+// Total = 11.
+
+
 public class raintrap{
     public static void raintrapped(int h[]){
         int n = h.length;

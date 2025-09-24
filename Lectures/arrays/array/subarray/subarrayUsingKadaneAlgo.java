@@ -1,4 +1,4 @@
-public class kdanesimple {
+public class subarrayUsingKadaneAlgo {
     public static void kadaneMaxSum(int[] numbers) {
         int maxSum = numbers[0];
         int currSum = 0;

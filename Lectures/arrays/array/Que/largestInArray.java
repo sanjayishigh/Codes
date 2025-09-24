@@ -1,4 +1,4 @@
-public class LargestInArray {
+public class largestInArray {
     public static int findLargest(int[] arr) {
         int max = Integer.MIN_VALUE;
 
@@ -12,7 +12,7 @@ public class LargestInArray {
     }
 
     public static void main(String[] args) {
-        int[] numbers = {4, 83, 9, 19, 41, 99, 5, 90};
+        int[] numbers = { 4, 83, 9, 19, 41, 99, 5, 90 };
         int largest = findLargest(numbers);
         System.out.println("Largest number: " + largest);
     }

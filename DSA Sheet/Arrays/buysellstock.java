@@ -1,3 +1,8 @@
+// You are given an array price[] where price[i] represents the price of a stock on the i-th day.
+// Write a program to find the maximum profit you can achieve by buying on one day and selling on a later day.
+// You can only make one transaction (buy once and sell once).
+// For example, given price = {7,1,5,3,6,4}, the maximum profit is 5 (buy at 1 and sell at 6).
+
 public class buysellstock{
     public static void buysell(int price[]){
         int buyprice = Integer.MAX_VALUE;
