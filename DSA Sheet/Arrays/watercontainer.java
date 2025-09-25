@@ -14,17 +14,24 @@
 
 public class watercontainer {
     public static int maxwater(int h[]){
-        int maxarea = Integer.MIN_VALUE;
+        int maxarea = 0;
         int n = h.length;
+        int left = 0;
+        int right = n-1;
         
 
-        for(int i=0;i<n;i++){
-            for(int j=i+1;j<n;j++){
-                int area = Math.min(h[i],h[j])*(j-i);
-                maxarea = Math.max(area,maxarea);
+        while(left<right){
+            int area = Math.min(h[right],h[left])*(right-left);
+            maxarea = Math.max(area,maxarea);
+
+            if(h[left]<h[right]){
+                left++;
+            }else{
+                right--;
             }
         }
-             
+                
+  
         return maxarea;
     }
     public static void main(String args[]){
